@@ -1,0 +1,24 @@
+CREATE TABLE art_supplies (id INTEGER PRIMARY KEY, item TEXT, amount_available INTEGER, category TEXT, aisle TEXT, price INTEGER); 
+
+INSERT INTO art_supplies 
+VALUES (1,"yarn", 50, "knitting", 3, 1.99),
+        (2, "paint", 2, "painting", 2, 3.99),
+        (3, "paint brushes", 10, "painting", 2, 1.99),
+        (4, "canvas", 5, "painting", 2, 4.99),
+        (5, "knitting needles", 15, "knitting", 3, 3.99),
+        (6, "cotton prints", 25, "sewing supplies", 1, 2.99),
+        (7, "sewing machine", 5, "sewing supplies", 1, 99.99),
+        (8, "buttons", 120, "sewing supplies", 1, 0.99),
+        (9, "stamps", 45, "scrapbooking", 4, 5.99),
+        (10, "ink pads", 10, "scrapbooking", 4, 5.99),
+        (11, "crayons", 20, "drawing", 5, 9.99),
+        (12, "sketch pads", 55, "drawing", 5, 3.99),
+        (13, "pencils", 123, "drawing", 5, 4.99), 
+        (14, "pens", 130, "drawing", 5, 5.99),
+        (15, "thread", 145, "sewing supplies", 1, 0.99);
+
+SELECT * FROM art_supplies WHERE price > 0 ORDER BY price DESC; 
+
+/*what is the average price for supplies?*/
+
+SELECT AVG(price) FROM art_supplies;
